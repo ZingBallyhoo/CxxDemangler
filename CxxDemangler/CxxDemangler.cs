@@ -8,7 +8,7 @@ namespace CxxDemangler
     /// </summary>
     public static class CxxDemangler
     {
-        internal delegate IParsingResult ParsingFunction(ParsingContext context);
+        public delegate IParsingResult ParsingFunction(ParsingContext context);
 
         /// <summary>
         /// Demangles the specified C++ linker symbol input.
@@ -37,12 +37,12 @@ namespace CxxDemangler
             return input;
         }
 
-        internal static IParsingResult Parse(ParsingContext context)
+        public static IParsingResult Parse(ParsingContext context)
         {
             return MangledName.Parse(context);
         }
 
-        internal static List<IParsingResult> ParseList(ParsingFunction parse, ParsingContext context)
+        public static List<IParsingResult> ParseList(ParsingFunction parse, ParsingContext context)
         {
             List<IParsingResult> results = new List<IParsingResult>();
 
@@ -61,7 +61,7 @@ namespace CxxDemangler
             return results;
         }
 
-        internal static ParsingContext CreateContext(string input)
+        public static ParsingContext CreateContext(string input)
         {
             SubstitutionTable table = new SubstitutionTable();
             SimpleStringParser parser = new SimpleStringParser(input);

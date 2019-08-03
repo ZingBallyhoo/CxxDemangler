@@ -1,6 +1,6 @@
 ﻿namespace CxxDemangler
 {
-    internal interface IDemangleAsInner
+    public interface IDemangleAsInner
     {
         void DemangleAsInner(DemanglingContext context);
     }

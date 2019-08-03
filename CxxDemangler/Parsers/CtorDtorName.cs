@@ -6,7 +6,7 @@
     //                 ::= D0 # deleting destructor
     //                 ::= D1 # complete object destructor
     //                 ::= D2 # base object destructor
-    internal class CtorDtorName : IParsingResultExtended
+    public class CtorDtorName : IParsingResultExtended
     {
         public enum Values
         {

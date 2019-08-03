@@ -2,9 +2,9 @@
 
 namespace CxxDemangler
 {
-    internal class SubstitutionTable
+    public class SubstitutionTable
     {
-        internal List<IParsingResult> Substitutions { get; private set; } = new List<IParsingResult>();
+        public List<IParsingResult> Substitutions { get; private set; } = new List<IParsingResult>();
 
         public int Size
         {

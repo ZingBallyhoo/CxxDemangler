@@ -1,7 +1,7 @@
 ﻿namespace CxxDemangler.Parsers
 {
     // <mangled-name> ::= _Z <encoding>
-    internal class MangledName
+    public class MangledName
     {
         public static IParsingResult Parse(ParsingContext context)
         {

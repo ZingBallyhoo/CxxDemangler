@@ -4,7 +4,7 @@
     //        ::= <unscoped-name>
     //        ::= <unscoped-template-name> <template-args>
     //        ::= <local-name>
-    internal class Name
+    public class Name
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -55,7 +55,7 @@
             return LocalName.Parse(context);
         }
 
-        internal class UnscopedTemplate : IParsingResultExtended
+        public class UnscopedTemplate : IParsingResultExtended
         {
             public UnscopedTemplate(IParsingResultExtended name, TemplateArgs args)
             {

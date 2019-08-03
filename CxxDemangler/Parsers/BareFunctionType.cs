@@ -6,7 +6,7 @@ namespace CxxDemangler.Parsers
 {
     // <bare-function-type> ::= <signature type>+
     //     # types are possible return type, then parameter types
-    internal class BareFunctionType : IParsingResult, IDemangleAsInner
+    public class BareFunctionType : IParsingResult, IDemangleAsInner
     {
         public BareFunctionType(IReadOnlyList<IParsingResult> types)
         {

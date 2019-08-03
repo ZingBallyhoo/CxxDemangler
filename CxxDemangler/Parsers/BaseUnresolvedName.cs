@@ -5,7 +5,7 @@
     //                         ::= on <operator-name> <template-args>         # unresolved operator template-id
     //                         ::= dn <destructor-name>                       # destructor or pseudo-destructor;
     //                                                                        # e.g. ~X or ~X<N-1>
-    internal class BaseUnresolvedName
+    public class BaseUnresolvedName
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -36,7 +36,7 @@
             return null;
         }
 
-        internal class Operator : IParsingResult
+        public class Operator : IParsingResult
         {
             public Operator(IParsingResult operatorName, IParsingResult arguments)
             {

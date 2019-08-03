@@ -1,6 +1,6 @@
 ﻿namespace CxxDemangler.Parsers
 {
-    internal class WellKnownComponent : IParsingResultExtended
+    public class WellKnownComponent : IParsingResultExtended
     {
         public enum Values
         {

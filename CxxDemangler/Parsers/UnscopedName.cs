@@ -2,7 +2,7 @@
 {
     // <unscoped-name> ::= <unqualified-name>
     //                 ::= St <unqualified-name>   # ::std::
-    internal class UnscopedName
+    public class UnscopedName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -24,7 +24,7 @@
             return UnqualifiedName.Parse(context);
         }
 
-        internal class Std : IParsingResultExtended
+        public class Std : IParsingResultExtended
         {
             public Std(IParsingResultExtended name)
             {

@@ -5,7 +5,7 @@
     //          ::= fL <L-1 non-negative number> p <top-level CV-qualifiers> _         # L > 0, first parameter
     //          ::= fL <L-1 non-negative number> p <top-level CV-qualifiers>
     //                                           <parameter-2 non-negative number> _   # L > 0, second and later parameters
-    internal class FunctionParam : IParsingResult
+    public class FunctionParam : IParsingResult
     {
         public FunctionParam(CvQualifiers cvQualifiers, int scope, int? param)
         {

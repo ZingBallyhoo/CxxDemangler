@@ -50,7 +50,7 @@
     //                 ::= cv <type>	# (cast)
     //                 ::= li <source-name>          # operator ""
     //                 ::= v <digit> <source-name>	# vendor extended operator
-    internal class OperatorName
+    public class OperatorName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -120,7 +120,7 @@
             return peek == 'c' || peek == 'l' || peek == 'v' || SimpleOperatorName.StartsWith(context);
         }
 
-        internal class Cast : IParsingResultExtended
+        public class Cast : IParsingResultExtended
         {
             public Cast(IParsingResultExtended type)
             {
@@ -146,7 +146,7 @@
             }
         }
 
-        internal class Literal : IParsingResultExtended
+        public class Literal : IParsingResultExtended
         {
             public Literal(IParsingResultExtended name)
             {
@@ -167,7 +167,7 @@
             }
         }
 
-        internal class VendorExtension : IParsingResultExtended
+        public class VendorExtension : IParsingResultExtended
         {
             public VendorExtension(int arity, IParsingResultExtended name)
             {

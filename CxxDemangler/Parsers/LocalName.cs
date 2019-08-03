@@ -2,7 +2,7 @@
 {
     // <local-name> := Z <function encoding> E <entity name> [<discriminator>]
     //              := Z <function encoding> E s [<discriminator>]
-    internal class LocalName
+    public class LocalName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -54,7 +54,7 @@
             return null;
         }
 
-        internal class Default : IParsingResultExtended
+        public class Default : IParsingResultExtended
         {
             public Default(IParsingResult encoding, int? param, IParsingResultExtended name)
             {
@@ -81,7 +81,7 @@
             }
         }
 
-        internal class Relative : IParsingResultExtended
+        public class Relative : IParsingResultExtended
         {
             public Relative(IParsingResult encoding, IParsingResultExtended name, Discriminator discriminator)
             {

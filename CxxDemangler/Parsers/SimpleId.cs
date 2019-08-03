@@ -1,7 +1,7 @@
 ﻿namespace CxxDemangler.Parsers
 {
     // <simple-id> ::= <source-name> [ <template-args> ]
-    internal class SimpleId : IParsingResult
+    public class SimpleId : IParsingResult
     {
         public SimpleId(IParsingResult name, IParsingResult arguments)
         {

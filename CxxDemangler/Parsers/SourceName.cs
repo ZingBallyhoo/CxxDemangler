@@ -3,7 +3,7 @@
 namespace CxxDemangler.Parsers
 {
     // <source-name> ::= <positive length number> <identifier>
-    internal class SourceName
+    public class SourceName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -55,7 +55,7 @@ namespace CxxDemangler.Parsers
             return char.IsDigit(context.Parser.Peek);
         }
 
-        internal class Identifier : IParsingResultExtended
+        public class Identifier : IParsingResultExtended
         {
             public Identifier(string name)
             {

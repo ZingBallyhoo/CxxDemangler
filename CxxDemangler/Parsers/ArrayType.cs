@@ -4,7 +4,7 @@ namespace CxxDemangler.Parsers
 {
     // <array-type> ::= A <positive dimension number> _ <element type>
     //              ::= A[< dimension expression >] _<element type>
-    internal abstract class ArrayType : IParsingResultExtended, IDemangleAsInner
+    public abstract class ArrayType : IParsingResultExtended, IDemangleAsInner
     {
         public ArrayType(IParsingResult type)
         {
@@ -115,7 +115,7 @@ namespace CxxDemangler.Parsers
 
         protected abstract void DemangleSize(DemanglingContext context);
 
-        internal class DimensionExpression : ArrayType
+        public class DimensionExpression : ArrayType
         {
             public DimensionExpression(IParsingResult expression, IParsingResult type)
                 : base(type)
@@ -131,7 +131,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class DimensionNumber : ArrayType
+        public class DimensionNumber : ArrayType
         {
             public DimensionNumber(int number, IParsingResult type)
                 : base(type)
@@ -147,7 +147,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class NoDimension : ArrayType
+        public class NoDimension : ArrayType
         {
             public NoDimension(IParsingResult type)
                 : base(type)

@@ -2,7 +2,7 @@
 {
     // <nested-name> ::= N [<CV-qualifiers>] [<ref-qualifier>] <prefix> <unqualified-name> E
     //               ::= N [<CV-qualifiers>] [<ref-qualifier>] <template-prefix> <template-args> E
-    internal class NestedName : IParsingResultExtended
+    public class NestedName : IParsingResultExtended
     {
         public NestedName(IParsingResultExtended prefix, CvQualifiers cvQualifiers, RefQualifier refQualifier)
         {

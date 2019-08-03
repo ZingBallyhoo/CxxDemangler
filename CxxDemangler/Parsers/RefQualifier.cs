@@ -2,7 +2,7 @@
 {
     // <ref-qualifier> ::= R                   # & ref-qualifier
     // <ref-qualifier> ::= O                   # && ref-qualifier
-    internal class RefQualifier : IParsingResult
+    public class RefQualifier : IParsingResult
     {
         public enum Values
         {

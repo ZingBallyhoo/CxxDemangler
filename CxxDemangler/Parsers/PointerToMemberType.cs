@@ -1,7 +1,7 @@
 ﻿namespace CxxDemangler.Parsers
 {
     // <pointer-to-member-type> ::= M <class type> <member type>
-    internal class PointerToMemberType : IParsingResultExtended, IDemangleAsInner
+    public class PointerToMemberType : IParsingResultExtended, IDemangleAsInner
     {
         public PointerToMemberType(IParsingResult type, IParsingResult member)
         {

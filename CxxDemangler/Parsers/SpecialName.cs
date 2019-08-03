@@ -4,7 +4,7 @@
     //        ::= TT <type>	# VTT structure (construction vtable index)
     //        ::= TI <type>	# typeinfo structure
     //        ::= TS <type>	# typeinfo name (null-terminated byte string)
-    internal class SpecialName
+    public class SpecialName
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -126,7 +126,7 @@
             return null;
         }
 
-        internal class VirtualTable : IParsingResult
+        public class VirtualTable : IParsingResult
         {
             public VirtualTable(IParsingResult type)
             {
@@ -151,7 +151,7 @@
             }
         }
 
-        internal class Vtt : IParsingResult
+        public class Vtt : IParsingResult
         {
             public Vtt(IParsingResult type)
             {
@@ -176,7 +176,7 @@
             }
         }
 
-        internal class TypeInfo : IParsingResult
+        public class TypeInfo : IParsingResult
         {
             public TypeInfo(IParsingResult type)
             {
@@ -192,7 +192,7 @@
             }
         }
 
-        internal class TypeInfoName : IParsingResult
+        public class TypeInfoName : IParsingResult
         {
             public TypeInfoName(IParsingResult type)
             {
@@ -208,7 +208,7 @@
             }
         }
 
-        internal class VirtualOverrideThunk : IParsingResult
+        public class VirtualOverrideThunk : IParsingResult
         {
             public VirtualOverrideThunk(IParsingResult offset, IParsingResult encoding)
             {
@@ -230,7 +230,7 @@
             }
         }
 
-        internal class VirtualOverrideThunkCovariant : IParsingResult
+        public class VirtualOverrideThunkCovariant : IParsingResult
         {
             public VirtualOverrideThunkCovariant(IParsingResult thisOffset, IParsingResult resultOffset, IParsingResult encoding)
             {
@@ -257,7 +257,7 @@
             }
         }
 
-        internal class Guard : IParsingResult
+        public class Guard : IParsingResult
         {
             public Guard(IParsingResult name)
             {
@@ -273,7 +273,7 @@
             }
         }
 
-        internal class GuardTemporary : IParsingResult
+        public class GuardTemporary : IParsingResult
         {
             public GuardTemporary(IParsingResult name, int index)
             {

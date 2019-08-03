@@ -2,7 +2,7 @@
 {
     // <template-template-param> ::= <template-param>
     //                           ::= <substitution>
-    internal class TemplateTemplateParam : IParsingResultExtended
+    public class TemplateTemplateParam : IParsingResultExtended
     {
         public TemplateTemplateParam(IParsingResultExtended parameter)
         {

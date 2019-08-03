@@ -32,7 +32,7 @@
     //                ::= Dc # decltype(auto)
     //                ::= Dn # std::nullptr_t (i.e., decltype(nullptr))
     //                ::= u <source-name>    # vendor extended type
-    internal class BuiltinType : IParsingResultExtended
+    public class BuiltinType : IParsingResultExtended
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -66,7 +66,7 @@
             throw new System.NotImplementedException();
         }
 
-        internal class Extension : BuiltinType
+        public class Extension : BuiltinType
         {
             public Extension(IParsingResultExtended name)
             {

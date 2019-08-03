@@ -7,7 +7,7 @@
     //                ::= L <pointer type> 0 E                               # null pointer template argument
     //                ::= L <type> <real-part float> _ <imag-part float> E   # complex floating point literal (C 2000)
     //                ::= L <mangled-name> E                                 # external name
-    internal class ExprPrimary
+    public class ExprPrimary
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -44,7 +44,7 @@
             return null;
         }
 
-        internal class External : IParsingResult
+        public class External : IParsingResult
         {
             public External(IParsingResult name)
             {
@@ -59,7 +59,7 @@
             }
         }
 
-        internal class Literal : IParsingResult
+        public class Literal : IParsingResult
         {
             public Literal(IParsingResult type, string name)
             {

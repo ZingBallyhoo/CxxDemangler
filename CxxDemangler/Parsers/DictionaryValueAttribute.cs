@@ -2,7 +2,7 @@
 
 namespace CxxDemangler.Parsers
 {
-    internal class DictionaryValueAttribute : Attribute
+    public class DictionaryValueAttribute : Attribute
     {
         public DictionaryValueAttribute(string input, string output)
         {

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace CxxDemangler
 {
-    internal interface IArgumentScope
+    public interface IArgumentScope
     {
         IParsingResult GetFunctionArg(int scope);
 
         IParsingResult GetTemplateArg(int number);
     }
 
-    internal struct DemanglingContext
+    public struct DemanglingContext
     {
         public struct TemplateArgsStack
         {
@@ -108,7 +108,7 @@ namespace CxxDemangler
         }
     }
 
-    internal static class DemanglerExtensions
+    public static class DemanglerExtensions
     {
         public static void Demangle(this IEnumerable<IParsingResult> elements, DemanglingContext context, string separator = ", ")
         {

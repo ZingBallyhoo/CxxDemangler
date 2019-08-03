@@ -3,7 +3,7 @@
     // <encoding> ::= <function name> <bare-function-type>
     //            ::= <data name>
     //            ::= <special-name>
-    internal class Encoding
+    public class Encoding
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -24,7 +24,7 @@
             return SpecialName.Parse(context);
         }
 
-        internal class Function : IParsingResult, IDemangleAsInner
+        public class Function : IParsingResult, IDemangleAsInner
         {
             public Function(IParsingResultExtended name, BareFunctionType type)
             {

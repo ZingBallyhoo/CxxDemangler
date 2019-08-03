@@ -2,7 +2,7 @@
 {
     // <unscoped-template-name> ::= <unscoped-name>
     //                          ::= <substitution>
-    internal class UnscopedTemplateName
+    public class UnscopedTemplateName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {

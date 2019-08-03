@@ -3,7 +3,7 @@
 namespace CxxDemangler.Parsers
 {
     // <initializer> ::= pi <expression>* E                                  # parenthesized initialization
-    internal class Initializer : IParsingResult
+    public class Initializer : IParsingResult
     {
         public Initializer(IReadOnlyList<IParsingResult> expressions)
         {

@@ -7,14 +7,14 @@ namespace CxxDemangler.Tests
 {
     public abstract class TestBase
     {
-        internal abstract IParsingResult Parse(ParsingContext context);
+        public abstract IParsingResult Parse(ParsingContext context);
 
-        internal virtual IEnumerable<IParsingResult> SubstitutionTableList()
+        public virtual IEnumerable<IParsingResult> SubstitutionTableList()
         {
             yield break;
         }
 
-        internal ParsingContext CreateContext(string input)
+        public ParsingContext CreateContext(string input)
         {
             ParsingContext context = CxxDemangler.CreateContext(input);
 
@@ -25,14 +25,14 @@ namespace CxxDemangler.Tests
             return context;
         }
 
-        internal IParsingResult Parse(string input)
+        public IParsingResult Parse(string input)
         {
             ParsingContext context = CreateContext(input);
 
             return Parse(context);
         }
 
-        internal void Verify(string input, IParsingResult expected, string endsWith = "...")
+        public void Verify(string input, IParsingResult expected, string endsWith = "...")
         {
             ParsingContext parsingContext = CreateContext(input);
             IParsingResult result = Parse(parsingContext);

@@ -97,12 +97,12 @@ namespace CxxDemangler.Tests.Parsing
             Assert.IsNull(Parse(""));
         }
 
-        internal override IEnumerable<IParsingResult> SubstitutionTableList()
+        public override IEnumerable<IParsingResult> SubstitutionTableList()
         {
             yield return new Parsers.StandardBuiltinType(Parsers.StandardBuiltinType.Values.Char);
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.FunctionType.Parse(context);
         }

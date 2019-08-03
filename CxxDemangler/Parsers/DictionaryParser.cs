@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace CxxDemangler.Parsers
 {
-    internal class DictionaryParser<T>
+    public class DictionaryParser<T>
     {
         private static HashSet<char> startingLetters = new HashSet<char>();
         private static Dictionary<string, T> mappings = new Dictionary<string, T>();

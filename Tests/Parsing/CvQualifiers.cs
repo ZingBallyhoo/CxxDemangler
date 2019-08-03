@@ -77,7 +77,7 @@ namespace CxxDemangler.Tests.Parsing
                     @const: true));
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.CvQualifiers.Parse(context);
         }

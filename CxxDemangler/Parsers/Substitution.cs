@@ -11,7 +11,7 @@
     // <substitution> ::= Si # ::std::basic_istream<char,  std::char_traits<char> >
     // <substitution> ::= So # ::std::basic_ostream<char,  std::char_traits<char> >
     // <substitution> ::= Sd # ::std::basic_iostream<char, std::char_traits<char> >
-    internal class Substitution : IParsingResultExtended
+    public class Substitution : IParsingResultExtended
     {
         private IParsingResult resolvedReference;
 
@@ -42,9 +42,12 @@
 
             if (!context.Parser.ParseNumberBase36(out number))
             {
-                number = -1;
+                number = 0;
+            } else
+            {
+                number += 2;  // todo: HACK. Nested names (e.g BlockLegacy::whatever) aren't implemented correctly, requiring this "fix"
             }
-            number++;
+            
 
 
             if (!context.Parser.VerifyString("_") || !context.SubstitutionTable.Contains(number))

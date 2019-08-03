@@ -9,7 +9,7 @@ namespace CxxDemangler.Parsers
     //          ::= <decltype>
     //          ::= <prefix> <data-member-prefix>
     //          ::= <substitution>
-    internal class Prefix
+    public class Prefix
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -167,7 +167,7 @@ namespace CxxDemangler.Parsers
             return result;
         }
 
-        internal class DataMember : IParsingResultExtended
+        public class DataMember : IParsingResultExtended
         {
             public DataMember(IParsingResultExtended name, IParsingResult member)
             {
@@ -190,7 +190,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class NestedName : IParsingResultExtended
+        public class NestedName : IParsingResultExtended
         {
             public NestedName(IParsingResultExtended previous, IParsingResultExtended name)
             {
@@ -215,7 +215,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Template : IParsingResultExtended
+        public class Template : IParsingResultExtended
         {
             public Template(IParsingResultExtended name, TemplateArgs arguments)
             {

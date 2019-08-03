@@ -6,7 +6,7 @@ namespace CxxDemangler.Parsers
     //                ::= X<expression> E         # expression
     //                ::= <expr-primary>          # simple expressions
     //                ::= J<template-arg>* E      # argument pack
-    internal class TemplateArg
+    public class TemplateArg
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -50,7 +50,7 @@ namespace CxxDemangler.Parsers
             return null;
         }
 
-        internal class ArgPack : IParsingResult
+        public class ArgPack : IParsingResult
         {
             public ArgPack(IReadOnlyList<IParsingResult> arguments)
             {

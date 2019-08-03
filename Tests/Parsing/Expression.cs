@@ -517,13 +517,13 @@ namespace CxxDemangler.Tests.Parsing
                     new Parsers.SourceName.Identifier("abc")));
         }
 
-        internal override IEnumerable<IParsingResult> SubstitutionTableList()
+        public override IEnumerable<IParsingResult> SubstitutionTableList()
         {
             yield return new Parsers.Type.PointerTo(
                 new Parsers.StandardBuiltinType(Parsers.StandardBuiltinType.Values.Int));
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.Expression.Parse(context);
         }

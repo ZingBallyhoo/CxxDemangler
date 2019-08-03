@@ -3,7 +3,7 @@
     // <unresolved-type> ::= <template-param> [ <template-args> ]            # T:: or T<X,Y>::
     //                   ::= <decltype>                                      # decltype(p)::
     //                   ::= <substitution>
-    internal class UnresolvedType
+    public class UnresolvedType
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -29,7 +29,7 @@
             return Substitution.Parse(context);
         }
 
-        internal class Template : IParsingResult
+        public class Template : IParsingResult
         {
             public Template(IParsingResult parameter, TemplateArgs arguments)
             {

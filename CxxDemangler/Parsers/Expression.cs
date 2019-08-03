@@ -45,7 +45,7 @@ namespace CxxDemangler.Parsers
     //                                                                       # freestanding dependent name (e.g., T::x),
     //                                                                       # objectless nonstatic member reference
     //              ::= <expr-primary>
-    internal class Expression
+    public class Expression
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -390,7 +390,7 @@ namespace CxxDemangler.Parsers
             return null;
         }
 
-        internal class Unary : IParsingResult
+        public class Unary : IParsingResult
         {
             public Unary(IParsingResult operatorName, IParsingResult expression)
             {
@@ -410,7 +410,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Binary : IParsingResult
+        public class Binary : IParsingResult
         {
             public Binary(IParsingResult operatorName, IParsingResult firstExpression, IParsingResult secondExpression)
             {
@@ -437,7 +437,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Ternary : IParsingResult
+        public class Ternary : IParsingResult
         {
             public Ternary(IParsingResult operatorName, IParsingResult firstExpression, IParsingResult secondExpression, IParsingResult thirdExpression)
             {
@@ -485,7 +485,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class PrefixInc : IParsingResult
+        public class PrefixInc : IParsingResult
         {
             public PrefixInc(IParsingResult expression)
             {
@@ -501,7 +501,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class PrefixDec : IParsingResult
+        public class PrefixDec : IParsingResult
         {
             public PrefixDec(IParsingResult expression)
             {
@@ -517,7 +517,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Call : IParsingResult
+        public class Call : IParsingResult
         {
             public Call(IParsingResult expression, IReadOnlyList<IParsingResult> arguments)
             {
@@ -539,7 +539,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class ConversionOne : IParsingResult
+        public class ConversionOne : IParsingResult
         {
             public ConversionOne(IParsingResult type, IParsingResult expression)
             {
@@ -560,7 +560,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class ConversionMany : IParsingResult
+        public class ConversionMany : IParsingResult
         {
             public ConversionMany(IParsingResult type, IReadOnlyList<IParsingResult> expressions)
             {
@@ -581,7 +581,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class ConversionBraced : IParsingResult
+        public class ConversionBraced : IParsingResult
         {
             public ConversionBraced(IParsingResult type, IReadOnlyList<IParsingResult> expressions)
             {
@@ -602,7 +602,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class BracedInitList : IParsingResult
+        public class BracedInitList : IParsingResult
         {
             public BracedInitList(IParsingResult expression)
             {
@@ -619,7 +619,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class New : IParsingResult
+        public class New : IParsingResult
         {
             public New(IReadOnlyList<IParsingResult> expressions, IParsingResult type, IParsingResult initializer = null)
             {
@@ -644,7 +644,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class GlobalNew : IParsingResult
+        public class GlobalNew : IParsingResult
         {
             public GlobalNew(IReadOnlyList<IParsingResult> expressions, IParsingResult type, IParsingResult initializer = null)
             {
@@ -669,7 +669,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class NewArray : IParsingResult
+        public class NewArray : IParsingResult
         {
             public NewArray(IReadOnlyList<IParsingResult> expressions, IParsingResult type, IParsingResult initializer = null)
             {
@@ -694,7 +694,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class GlobalNewArray : IParsingResult
+        public class GlobalNewArray : IParsingResult
         {
             public GlobalNewArray(IReadOnlyList<IParsingResult> expressions, IParsingResult type, IParsingResult initializer = null)
             {
@@ -719,7 +719,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Delete : IParsingResult
+        public class Delete : IParsingResult
         {
             public Delete(IParsingResult expression)
             {
@@ -735,7 +735,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class GlobalDelete : IParsingResult
+        public class GlobalDelete : IParsingResult
         {
             public GlobalDelete(IParsingResult expression)
             {
@@ -751,7 +751,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class DeleteArray : IParsingResult
+        public class DeleteArray : IParsingResult
         {
             public DeleteArray(IParsingResult expression)
             {
@@ -767,7 +767,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class GlobalDeleteArray : IParsingResult
+        public class GlobalDeleteArray : IParsingResult
         {
             public GlobalDeleteArray(IParsingResult expression)
             {
@@ -783,7 +783,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class DynamicCast : IParsingResult
+        public class DynamicCast : IParsingResult
         {
             public DynamicCast(IParsingResult type, IParsingResult expression)
             {
@@ -805,7 +805,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class StaticCast : IParsingResult
+        public class StaticCast : IParsingResult
         {
             public StaticCast(IParsingResult type, IParsingResult expression)
             {
@@ -827,7 +827,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class ConstCast : IParsingResult
+        public class ConstCast : IParsingResult
         {
             public ConstCast(IParsingResult type, IParsingResult expression)
             {
@@ -849,7 +849,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class ReinterpretCast : IParsingResult
+        public class ReinterpretCast : IParsingResult
         {
             public ReinterpretCast(IParsingResult type, IParsingResult expression)
             {
@@ -871,7 +871,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class TypeIdType : IParsingResult
+        public class TypeIdType : IParsingResult
         {
             public TypeIdType(IParsingResult type)
             {
@@ -888,7 +888,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class TypeIdExpression : IParsingResult
+        public class TypeIdExpression : IParsingResult
         {
             public TypeIdExpression(IParsingResult expression)
             {
@@ -905,7 +905,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class SizeOfType : IParsingResult
+        public class SizeOfType : IParsingResult
         {
             public SizeOfType(IParsingResult type)
             {
@@ -922,7 +922,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class SizeOfExpression : IParsingResult
+        public class SizeOfExpression : IParsingResult
         {
             public SizeOfExpression(IParsingResult expression)
             {
@@ -939,7 +939,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class AlignOfType : IParsingResult
+        public class AlignOfType : IParsingResult
         {
             public AlignOfType(IParsingResult type)
             {
@@ -956,7 +956,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class AlignOfExpression : IParsingResult
+        public class AlignOfExpression : IParsingResult
         {
             public AlignOfExpression(IParsingResult expression)
             {
@@ -973,7 +973,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Noexcept : IParsingResult
+        public class Noexcept : IParsingResult
         {
             public Noexcept(IParsingResult expression)
             {
@@ -990,7 +990,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Member : IParsingResult
+        public class Member : IParsingResult
         {
             public Member(IParsingResult expression, IParsingResult name)
             {
@@ -1009,7 +1009,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class DeferMember : IParsingResult
+        public class DeferMember : IParsingResult
         {
             public DeferMember(IParsingResult expression, IParsingResult name)
             {
@@ -1029,7 +1029,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class PointerToMember : IParsingResult
+        public class PointerToMember : IParsingResult
         {
             public PointerToMember(IParsingResult expression, IParsingResult expression2)
             {
@@ -1049,7 +1049,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class SizeOfTemplatepack : IParsingResult
+        public class SizeOfTemplatepack : IParsingResult
         {
             public SizeOfTemplatepack(IParsingResult parameter)
             {
@@ -1066,7 +1066,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class SizeOfFunctionPack : IParsingResult
+        public class SizeOfFunctionPack : IParsingResult
         {
             public SizeOfFunctionPack(IParsingResult parameter)
             {
@@ -1083,7 +1083,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class SizeofCapturedTemplatePack : IParsingResult
+        public class SizeofCapturedTemplatePack : IParsingResult
         {
             public SizeofCapturedTemplatePack(IReadOnlyList<IParsingResult> arguments)
             {
@@ -1100,7 +1100,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class PackExpansion : IParsingResult
+        public class PackExpansion : IParsingResult
         {
             public PackExpansion(IParsingResult expression)
             {
@@ -1116,7 +1116,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Throw : IParsingResult
+        public class Throw : IParsingResult
         {
             public Throw(IParsingResult expression)
             {
@@ -1132,7 +1132,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Retrow : IParsingResult
+        public class Retrow : IParsingResult
         {
             public void Demangle(DemanglingContext context)
             {

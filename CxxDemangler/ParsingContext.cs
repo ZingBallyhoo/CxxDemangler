@@ -1,13 +1,13 @@
 ﻿namespace CxxDemangler
 {
-    internal struct RewindState
+    public struct RewindState
     {
         public int Position { get; set; }
 
         public int SubstitutionTableSize { get; set; }
     }
 
-    internal struct ParsingContext
+    public struct ParsingContext
     {
         public SimpleStringParser Parser { get; set; }
 

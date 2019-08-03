@@ -4,7 +4,7 @@
     //                   ::= Ts <name>  # dependent elaborated type specifier using 'struct' or 'class'
     //                   ::= Tu <name>  # dependent elaborated type specifier using 'union'
     //                   ::= Te<name>  # dependent elaborated type specifier using 'enum'
-    internal class ClassEnumType
+    public class ClassEnumType
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -49,7 +49,7 @@
             return null;
         }
 
-        internal class ElaboratedEnum : IParsingResultExtended
+        public class ElaboratedEnum : IParsingResultExtended
         {
             public ElaboratedEnum(IParsingResultExtended name)
             {
@@ -70,7 +70,7 @@
             }
         }
 
-        internal class ElaboratedStruct : IParsingResultExtended
+        public class ElaboratedStruct : IParsingResultExtended
         {
             public ElaboratedStruct(IParsingResultExtended name)
             {
@@ -91,7 +91,7 @@
             }
         }
 
-        internal class ElaboratedUnion : IParsingResultExtended
+        public class ElaboratedUnion : IParsingResultExtended
         {
             public ElaboratedUnion(IParsingResultExtended name)
             {

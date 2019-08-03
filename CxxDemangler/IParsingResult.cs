@@ -2,12 +2,12 @@
 
 namespace CxxDemangler
 {
-    internal interface IParsingResult
+    public interface IParsingResult
     {
         void Demangle(DemanglingContext context);
     }
 
-    internal interface IParsingResultExtended : IParsingResult
+    public interface IParsingResultExtended : IParsingResult
     {
         TemplateArgs GetTemplateArgs();
     }

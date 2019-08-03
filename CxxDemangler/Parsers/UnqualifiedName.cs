@@ -5,7 +5,7 @@
     //                    ::= <source-name>
     //                    ::= <unnamed-type-name>
     //                    ::= DC <source-name>+ E      # structured binding declaration
-    internal class UnqualifiedName
+    public class UnqualifiedName
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {

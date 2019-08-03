@@ -8,7 +8,7 @@ namespace CxxDemangler.Parsers
     //                                                                         # T::N::x /decltype(p)::N::x
     //                     ::= [gs] sr <unresolved-qualifier-level>+ E <base-unresolved-name>
     //                                                                         # A::x, N::y, A<T>::z; "gs" means leading "::"
-    internal class UnresolvedName
+    public class UnresolvedName
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -90,7 +90,7 @@ namespace CxxDemangler.Parsers
             return null;
         }
 
-        internal class Global : IParsingResult
+        public class Global : IParsingResult
         {
             public Global(IParsingResult name)
             {
@@ -106,7 +106,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Nested1 : IParsingResult
+        public class Nested1 : IParsingResult
         {
             public Nested1(IParsingResult type, IReadOnlyList<IParsingResult> levels, IParsingResult name)
             {
@@ -133,7 +133,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class Nested2 : IParsingResult
+        public class Nested2 : IParsingResult
         {
             public Nested2(IReadOnlyList<IParsingResult> levels, IParsingResult name)
             {
@@ -156,7 +156,7 @@ namespace CxxDemangler.Parsers
             }
         }
 
-        internal class GlobalNested2 : IParsingResult
+        public class GlobalNested2 : IParsingResult
         {
             public GlobalNested2(IReadOnlyList<IParsingResult> levels, IParsingResult name)
             {

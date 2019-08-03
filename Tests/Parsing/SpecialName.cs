@@ -96,7 +96,7 @@ namespace CxxDemangler.Tests.Parsing
             Assert.IsNull(Parse("GR3abc0"));
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.SpecialName.Parse(context);
         }

@@ -1,7 +1,7 @@
 ﻿namespace CxxDemangler.Parsers
 {
     // <unnamed-type-name> ::= Ut [ <nonnegative number> ] _
-    internal class UnnamedTypeName : IParsingResultExtended
+    public class UnnamedTypeName : IParsingResultExtended
     {
         public UnnamedTypeName(int? number)
         {

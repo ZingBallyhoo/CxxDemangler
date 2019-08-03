@@ -2,7 +2,7 @@
 
 namespace CxxDemangler
 {
-    internal class SimpleStringWriter
+    public class SimpleStringWriter
     {
         public StringBuilder StringBuilder { get; private set; } = new StringBuilder();
 

@@ -9,7 +9,7 @@
     //         ::= <template-template-param> <template-args>
     //         ::= <decltype>
     //         ::= <substitution>
-    internal class Type
+    public class Type
     {
         public static IParsingResultExtended Parse(ParsingContext context)
         {
@@ -185,7 +185,7 @@
             return result;
         }
 
-        internal class Complex : IParsingResultExtended
+        public class Complex : IParsingResultExtended
         {
             public Complex(IParsingResultExtended type)
             {
@@ -206,7 +206,7 @@
             }
         }
 
-        internal class Imaginary : IParsingResultExtended
+        public class Imaginary : IParsingResultExtended
         {
             public Imaginary(IParsingResultExtended type)
             {
@@ -227,7 +227,7 @@
             }
         }
 
-        internal class LvalueRef : IParsingResultExtended, IDemangleAsInner
+        public class LvalueRef : IParsingResultExtended, IDemangleAsInner
         {
             public LvalueRef(IParsingResultExtended type)
             {
@@ -261,7 +261,7 @@
             }
         }
 
-        internal class PointerTo : IParsingResultExtended, IDemangleAsInner
+        public class PointerTo : IParsingResultExtended, IDemangleAsInner
         {
             public PointerTo(IParsingResultExtended type)
             {
@@ -295,7 +295,7 @@
             }
         }
 
-        internal class RvalueRef : IParsingResultExtended, IDemangleAsInner
+        public class RvalueRef : IParsingResultExtended, IDemangleAsInner
         {
             public RvalueRef(IParsingResultExtended type)
             {
@@ -329,7 +329,7 @@
             }
         }
 
-        internal class QualifiedBuiltin : IParsingResultExtended
+        public class QualifiedBuiltin : IParsingResultExtended
         {
             public QualifiedBuiltin(CvQualifiers qualifiers, IParsingResultExtended type)
             {
@@ -357,7 +357,7 @@
             }
         }
 
-        internal class Qualified : IParsingResultExtended
+        public class Qualified : IParsingResultExtended
         {
             public Qualified(CvQualifiers qualifiers, IParsingResultExtended type)
             {
@@ -385,7 +385,7 @@
             }
         }
 
-        internal class TemplateTemplate : IParsingResultExtended
+        public class TemplateTemplate : IParsingResultExtended
         {
             public TemplateTemplate(IParsingResultExtended type, TemplateArgs arguments)
             {
@@ -409,7 +409,7 @@
             }
         }
 
-        internal class PackExtension : IParsingResultExtended
+        public class PackExtension : IParsingResultExtended
         {
             public PackExtension(IParsingResultExtended type)
             {
@@ -430,7 +430,7 @@
             }
         }
 
-        internal class VendorExtension : IParsingResultExtended
+        public class VendorExtension : IParsingResultExtended
         {
             public VendorExtension(IParsingResult name, TemplateArgs arguments, IParsingResult type)
             {

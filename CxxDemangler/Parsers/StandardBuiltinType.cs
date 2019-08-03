@@ -1,6 +1,6 @@
 ﻿namespace CxxDemangler.Parsers
 {
-    internal class StandardBuiltinType : BuiltinType, IParsingResultExtended
+    public class StandardBuiltinType : BuiltinType, IParsingResultExtended
     {
         public enum Values
         {

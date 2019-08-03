@@ -1,6 +1,6 @@
 ﻿namespace CxxDemangler.Parsers
 {
-    internal class SimpleOperatorName : IParsingResultExtended
+    public class SimpleOperatorName : IParsingResultExtended
     {
         public SimpleOperatorName(Values value)
         {

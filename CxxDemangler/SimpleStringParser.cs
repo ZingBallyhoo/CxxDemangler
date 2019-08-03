@@ -1,6 +1,6 @@
 ﻿namespace CxxDemangler
 {
-    internal class SimpleStringParser
+    public class SimpleStringParser
     {
         public SimpleStringParser(string input)
         {

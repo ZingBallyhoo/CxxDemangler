@@ -2,7 +2,7 @@
 {
     // <destructor-name> ::= <unresolved-type>                               # e.g., ~T or ~decltype(f())
     //                   ::= <simple-id>                                     # e.g., ~A<2*N>
-    internal class DestructorName : IParsingResult
+    public class DestructorName : IParsingResult
     {
         public DestructorName(IParsingResult name)
         {

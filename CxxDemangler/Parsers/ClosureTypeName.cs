@@ -1,7 +1,7 @@
 ﻿namespace CxxDemangler.Parsers
 {
     // <closure-type-name> ::= Ul <lambda-sig> E [ <nonnegative number> ] _
-    internal class ClosureTypeName : IParsingResultExtended
+    public class ClosureTypeName : IParsingResultExtended
     {
         public ClosureTypeName(IParsingResult signature, int? number)
         {

@@ -32,13 +32,13 @@ namespace CxxDemangler.Tests.Parsing
             Assert.IsNull(Parse("..."));
         }
 
-        internal override IEnumerable<IParsingResult> SubstitutionTableList()
+        public override IEnumerable<IParsingResult> SubstitutionTableList()
         {
             yield return new Parsers.TemplateTemplateParam(
                 new Parsers.TemplateParam(0));
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.TemplateTemplateParam.Parse(context);
         }

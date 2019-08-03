@@ -2,7 +2,7 @@
 {
     // <call-offset> ::= h <nv-offset> _
     //               ::= v <v-offset> _
-    internal class CallOffset
+    public class CallOffset
     {
         public static IParsingResult Parse(ParsingContext context)
         {
@@ -37,7 +37,7 @@
             return null;
         }
 
-        internal class NonVirtual : IParsingResult
+        public class NonVirtual : IParsingResult
         {
             public NonVirtual(int offset)
             {
@@ -52,7 +52,7 @@
             }
         }
 
-        internal class Virtual : IParsingResult
+        public class Virtual : IParsingResult
         {
             public Virtual(int offset, int virtualOffset)
             {

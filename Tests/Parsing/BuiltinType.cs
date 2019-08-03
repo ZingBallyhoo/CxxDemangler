@@ -34,7 +34,7 @@ namespace CxxDemangler.Tests.Parsing
             Assert.IsNull(Parse(""));
         }
 
-        internal override IParsingResult Parse(ParsingContext context)
+        public override IParsingResult Parse(ParsingContext context)
         {
             return Parsers.BuiltinType.Parse(context);
         }
